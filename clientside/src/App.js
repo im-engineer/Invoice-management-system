@@ -22,6 +22,7 @@ function App() {
           }
           <Routes>
           <Route path="/login" element={<Login />} ></Route>
+          <Route path="/home" element={<Home />} ></Route>
 
           </Routes>
           {/* <video autoPlay loop muted>

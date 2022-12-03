@@ -90,7 +90,9 @@ export default function Login() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="login-design col-md-6"></div>
+                            <div className=" col-md-6">
+                              <img style={{height:"100%",width:"40vh"}}src={"https://kinaracapital.com/wp-content/uploads/2022/06/Invoice-Image3.jpg"} alt=""/>
+                            </div>
                         </div>
                     </form>    
             </div>

@@ -44,31 +44,32 @@ window.location.reload()
     setPagination({start:start, end:end})
   }
 
-  const downloadHandler = () => {
-      const doc = new jsPDF();
-      doc.text("Invalid List",20,10);
+  // const downloadHandler = (data) => {
+  //     const doc = new jsPDF();
+  //     doc.text("Invalid List",20,10);
 
-      doc.autoTable({
-          columns:[
-              {headers:"Customer name", datakey:"customername"},
-              {headers:"Product name", datakey:"productname"},
-              {headers:"Quantity", datakey:"quantity"},
-              {headers:"Price", datakey:"price"},
-              {headers:"Tax", datakey:"tax"},
-              {headers:"Grand Total", datakey:"grandtotal"},
-              {headers:"Status", datakey:"status"},
+  //     doc.autoTable({
+  //         columns:[
+  //             {headers:"Customer name", datakey:`${data.customername}`},
+  //             {headers:"Product name", datakey:"productname"},
+  //             {headers:"Quantity", datakey:"quantity"},
+  //             {headers:"Price", datakey:"price"},
+  //             {headers:"Tax", datakey:"tax"},
+  //             {headers:"Grand Total", datakey:"grandtotal"},
+  //             {headers:"Status", datakey:"status"},
 
-          ],
-          body:show
-      })
-      doc.save("Invoice List")
-  }
-  console.log(downloadHandler)
+  //         ],
+  //         body:show
+  //     })
+  //     doc.save("Invoice List")
+  // }
+  // console.log(downloadHandler)
 
 
   const pdfGenerate = (data) => {
       var doc = new jsPDF('landscape','px','a4','false');
       doc.setFont('Helvertica','bold')
+      doc.setDrawColor(255,60,60);
       doc.text(60,60,`Customer name : ${data.customername}`)
       doc.text(60,80,`Product name : ${data.item[0].productname}`)
       doc.text(60,100,`Quantity : ${data.item[0].quantity}`)

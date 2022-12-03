@@ -51,8 +51,8 @@ function Navbar() {
                 <ul className="navbar-nav ml-auto ">
                   {userdata.isLoggedIn ? (
                     <div>
-                      <Link className="navbar-brand" to="/about">
-                        <i class="fa-solid fa-info"></i>
+                      <Link className="navbar-brand" to="/home">
+                        <i class="fa-solid fa-house-user"></i>
                       </Link>
 
                       <Link className="navbar-brand" to="/contact">
@@ -67,10 +67,10 @@ function Navbar() {
                     </div>
                   ) : (
                     <div>
-                      <Link className="navbar-brand" zc to="/">
-                        <i class="fa fa-solid fa-house-user"></i>Home
+                      <Link className="navbar-brand" zc to="/home">
+                        <i class="fa fa-solid fa-house-user"></i>
                       </Link>
-                      <Link className="navbar-brand" to="/about">
+                      <Link className="navbar-brand" to="/">
                         
                       </Link>
 
